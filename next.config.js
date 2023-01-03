@@ -4,4 +4,4 @@ module.exports = {
     appDir: true,
   },
   reactStrictMode: true,
-}
+};

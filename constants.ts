@@ -7,3 +7,5 @@ export const categories: Category[] = [
   'sports',
   'technology',
 ];
+
+export default categories;
