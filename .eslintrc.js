@@ -31,6 +31,7 @@ module.exports = {
     indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
     'max-lines': ['error', 80],
+    '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-use-before-define': 'warn',
     quotes: ['error', 'single'],
     'react/jsx-filename-extension': [1, {
