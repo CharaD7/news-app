@@ -41,6 +41,15 @@ const fetchNews = async (
     }
   `;
   // Fetch function with Next.js 13 caching...
+  const res = await fetch('https://blauvelt.stepzen.net/api/jolly-puma/__graphql', {
+    method: 'POST',
+    cache: isDynamic ? 'no-cache' : 'default',
+    next: isDynamic ? { revalidate: 0 } : { revalidate: 20 },
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Apikey ${process.env.STEPZEN_API_KEY}`,
+    }
+  });
 
   // Sort function by images vs not images present
 
