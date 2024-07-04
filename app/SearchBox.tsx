@@ -8,7 +8,7 @@ function SearchBox() {
   const router = useRouter();
 
   const handleSearch = ( e: FormEvent<HTMLFormElement> ) => {
-    e.preventDefault();
+    e.preventDefault(); // to prevent the default refresh behaviour
     if (!input) return;
 
     router.push(`/search?term=${input}`);
@@ -20,7 +20,7 @@ function SearchBox() {
       <input
         className='w-full h-14 rounded-sm placeholder-gray-500 text-gray-500 outline-none flex-1 bg-transparent dark:text-orange-400'
         onChange={(e) => setInput(e.target.value)}
-        placeholder='Search Keywords'
+        placeholder='Search Keywords...'
         type='text'
         value={input}
       />
