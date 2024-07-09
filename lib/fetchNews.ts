@@ -15,7 +15,7 @@ const fetchNews = async (
       myQuery(
         access_key: $access_key
         categories: $categories
-        countries: 'gb'
+        countries: 'gh'
         sort: 'published_desc'
         keywords: $keywords
         ) {
@@ -41,7 +41,7 @@ const fetchNews = async (
     }
   `;
   // Fetch function with Next.js 13 caching...
-  const res = await fetch('https://blauvelt.stepzen.net/api/jolly-puma/__graphql', {
+  const res = await fetch('https://blauvelt.stepzen.net/api/innocent-puffin/__graphql', {
     method: 'POST',
     cache: isDynamic ? 'no-cache' : 'default',
     next: isDynamic ? { revalidate: 0 } : { revalidate: 20 },
